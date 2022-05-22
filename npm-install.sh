@@ -5,6 +5,15 @@ docker run \
   --workdir /usr/src/app \
   node:latest \
   bash
+  
+docker run \
+  --interactive --tty \
+  --volume $(pwd):/usr/src/app \
+  --workdir /usr/src/app \
+  --publish 3000:3000 \
+  --env CHOKIDAR_USEPOLLING=true \
+  node:latest \
+  bash
 
 docker run \
   --volume $(pwd):/usr/src/app \
