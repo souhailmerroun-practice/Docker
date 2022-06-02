@@ -29,5 +29,6 @@ docker run \
   --interactive --tty \
   --volume $(pwd):/e2e \
   --workdir /e2e \
+  --publish 3000:3000 \
   cypress/included:3.2.0
 ```
